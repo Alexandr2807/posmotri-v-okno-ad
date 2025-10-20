@@ -5,12 +5,116 @@
   justify-content: center;
   align-items: center;
   background-color: #545050;
+  padding: 120px 0;
+  text-align: center;
+  background-color: #f8f9fa;
 }
 
 .error__title {
-  color: #fff;
-  font-family: Oswald, sans-serif;
-  font-size: 30px;
+  font-family: 'Merriweather', serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ff7b00;
+  margin-bottom: 20px
   text-align: center;
   text-transform: uppercase;
+}
+
+.error__content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error__subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.error__message {
+    font-size: 1.125rem;
+    color: #545454;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.error__button {
+    display: inline-block;
+    background-color: #ff7b00;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.error__button:hover {
+    background-color: #e66a00;
+    transform: translateY(-2px);
+}
+
+.error__animation {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .error__title {
+        font-size: 4rem;
+    }
+    
+    .error__subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .error__animation {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .error {
+        padding: 80px 0;
+    }
+    
+    .error__title {
+        font-size: 3rem;
+    }
+    
+    .error__subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .error__animation {
+        width: 120px;
+        height: 120px;
+    }
 }
